@@ -1,0 +1,8 @@
+.collection {
+  @apply flex flex-col md:flex-row lg:flex-col justify-center items-center gap-6 md:gap-9 lg:gap-[72px] mx-auto md:text-start lg:text-center max-w-[573px] relative;
+
+  h3 {
+    font-weight: 900;
+    @apply text-[1.75rem] leading-[2rem] font-fraunces text-Dark-Slate;
+  }
+}

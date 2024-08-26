@@ -1,0 +1,30 @@
+.gradient-bg-header {
+  @apply relative md:translate-y-1/2 z-0 md:opacity-50;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(254, 252, 247);
+    background: -moz-linear-gradient(
+      180deg,
+      rgba(254, 252, 247, 0.01) 0%,
+      rgba(254, 252, 247, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      180deg,
+      rgba(254, 252, 247, 0.01) 0%,
+      rgba(254, 252, 247, 1) 100%
+    );
+    background: linear-gradient(
+      180deg,
+      rgba(254, 252, 247, 0.01) 0%,
+      rgba(254, 252, 247, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fefcf7",endColorstr="#fefcf7",GradientType=1);
+  }
+
+  h2 {
+    font-weight: 900;
+    @apply text-Cool-Gray font-fraunces text-[2.5rem] leading-[4.5rem] md:text-[7rem] md:leading-[5.5rem] lg:text-[9.375rem] lg:leading-[8rem];
+  }
+}

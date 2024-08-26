@@ -1,0 +1,19 @@
+<section id="why-choose-us" class="text-center">
+
+  <article class="bg-Charcoal-Blue px-6 pt-16 pb-7 rounded-t-[10px]">
+    <h2>Why choose us?</h2>
+
+    <p class="description-1 mt-6">A large part of our role is choosing which particular coffees will be featured in our
+      range. This means working closely with the best coffee growers to give you a more impactful experience on every
+      level.</p>
+  </article>
+
+
+  <article class="grid gap-6 pt-9 px-6" id="reasons">
+
+    <app-reason *ngFor="let reason of reasons" [Reason]="reason" />
+
+
+  </article>
+
+</section>

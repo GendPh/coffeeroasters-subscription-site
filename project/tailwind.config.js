@@ -16,6 +16,7 @@ module.exports = {
         "Cool-Gray": '#83888F',
         "Dark-Slate": '#333D4B',
         "Apricot-Cream": '#FDD6BA',
+        "Charcoal-Blue": '#2c343e',
 
         btn: {
           bg: '#0e8784',

@@ -1,0 +1,10 @@
+<!-- Collection Component. After the component is viewed it will toggle an entry animation -->
+<div class="collection animate__animated" [ngClass]="{'opacity-0': !inViewport, 'animate__rotateInUpLeft': inViewport}">
+  <figure class="w-[200px]">
+    <img src="../../assets/home/desktop/image-{{collection.image}}.png" alt="{{collection.title}}" class="w-full">
+  </figure>
+  <div>
+    <h3>{{collection.title}}</h3>
+    <p class="description-1 text-Dark-Slate mt-4 md:mt-6">{{collection.description}}</p>
+  </div>
+</div>

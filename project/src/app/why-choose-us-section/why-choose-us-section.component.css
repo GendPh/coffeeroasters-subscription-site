@@ -1,0 +1,23 @@
+#why-choose-us {
+  h2 {
+    font-weight: 900;
+    @apply text-[1.75rem] leading-[1.75rem] font-fraunces text-Alabaster;
+  }
+
+  #reasons {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-image: url('../../assets/about/desktop/bg-quality.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: -1;
+      @apply h-[633px] rounded-b-[10px] bg-Charcoal-Blue;
+    }
+  }
+}
