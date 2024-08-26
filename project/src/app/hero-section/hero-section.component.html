@@ -1,0 +1,23 @@
+<section id="hero-section" [ngClass]="{'animate__fadeIn': inViewport, page, 'opacity-0': !inViewport}"
+  class="px-6 md:px-[58px] lg:px-[85px] py-[100px] md:py-[104px] lg:py-[117px] relative animate__animated">
+
+  <figure class="absolute inset-0 z-0">
+    <img loading="eager" src="../../assets/{{page}}/mobile/mobile-image-hero.jpg" alt="coffee image" class="img ">
+    <img loading="eager" src="../../assets/{{page}}/tablet/tablet-image-hero.jpg" alt="coffee image" class="img tablet">
+    <img loading="eager" src="../../assets/{{page}}/desktop/desktop-image-hero.jpg" alt="coffee image"
+      class="img desktop">
+  </figure>
+
+  <article class="relative text-center md:text-start md:max-w-[392px] lg:max-w-[510px]">
+    <h1 class="animate__animated header-1"
+      [ngClass]="{'opacity-0': !inViewport, 'animate__bounceIn':inViewport, 'small':isTittleSmall}">{{tittle}}</h1>
+
+    <p class="animate__animated description-1 mt-6 mb-10 lg:text-balance"
+      [ngClass]="{'opacity-0': !inViewport, 'animate__bounceIn':inViewport}">{{description}}</p>
+
+
+    <app-btn [Animate]="inViewport" *ngIf="asBtn" />
+
+  </article>
+
+</section>

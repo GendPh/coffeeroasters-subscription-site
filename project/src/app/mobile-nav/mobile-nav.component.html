@@ -1,0 +1,18 @@
+<nav class="fixed md:hidden z-50 w-full h-full" [ngClass]="{'open':isMobileNavOpen}">
+
+  <ul class="landscape:bg-Alabaster text-center space-y-8 py-10 landscape:pt-0 overflow-hidden">
+    <li class="animate__animated"
+      [ngClass]="{'opacity-0': !isMobileNavOpen, 'animate__bounceInDown': isMobileNavOpen,'animate__bounceOutUp': !isMobileNavOpen}">
+      <a routerLink="" routerLinkActive="current" [routerLinkActiveOptions]="{exact:true}" class="link mobile">Home</a>
+    </li>
+    <li class="animate__animated"
+      [ngClass]="{'opacity-0': !isMobileNavOpen, 'animate__bounceInLeft': isMobileNavOpen,'animate__bounceOutRight': !isMobileNavOpen}">
+      <a routerLink="/about-us" routerLinkActive="current" class="link mobile">About Us</a>
+    </li>
+    <li class="animate__animated"
+      [ngClass]="{'opacity-0': !isMobileNavOpen, 'animate__bounceInUp': isMobileNavOpen,'animate__bounceOutDown': !isMobileNavOpen}">
+      <a routerLink="plan" routerLinkActive="current" class="link mobile">Create Your Plan</a>
+    </li>
+  </ul>
+
+</nav>

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+@import '../node_modules/hamburgers/dist/hamburgers.css';
+@import 'animate.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-Alabaster overflow-x-hidden;
+  }
+}
+
+@layer components {
+  /* Linf from header / mobile nav /footer */
+  .link {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: /* 12px */ 0.75rem;
+    line-height: /* 15px */ 0.938rem;
+    letter-spacing: /* 0.92px */ 0.058rem;
+    @apply font-barlow text-Cool-Gray hover:text-Dark-Slate transition-colors duration-200 ease-linear;
+
+    &.current {
+      @apply text-Dark-Slate;
+
+      &.mobile {
+        @apply underline underline-offset-2;
+      }
+    }
+
+    &.mobile {
+      font-size: /* 24px */ 1.5rem;
+      line-height: /* 32px */ 2rem;
+      letter-spacing: normal;
+      font-weight: 900;
+      @apply font-fraunces text-Dark-Slate;
+    }
+    &.footer {
+      @apply hover:text-Alabaster;
+    }
+  }
+  /* End Link from header / mobile nav /footer */
+
+  /* Hamburger Button from header special custom */
+  .hamburger {
+    width: 16px;
+    height: 15px;
+    padding: 0px;
+
+    &.is-active {
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        background-color: #333d4b;
+      }
+      .hamburger-inner::after {
+        top: 0px;
+      }
+    }
+  }
+
+  .hamburger-box {
+    width: 16px;
+    height: 15px;
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      width: 16px;
+      height: 3px;
+      border-radius: 3px;
+      background-color: #333d4b;
+    }
+    .hamburger-inner::before {
+      top: -6px;
+    }
+    .hamburger-inner::after {
+      bottom: -6px;
+    }
+  }
+  /* End Hamburger Button from header special custom */
+
+  /* Img styles with hidden mobile tablet and desktop */
+  .img {
+    @apply md:hidden w-full h-full object-cover;
+
+    &.tablet {
+      @apply hidden md:block lg:hidden;
+    }
+
+    &.desktop {
+      @apply hidden lg:block;
+    }
+  }
+  /* End Img styles with hidden mobile tablet and desktop */
+
+  /* Button text style */
+  .btn-text {
+    font-size: /* 18px */ 1.125rem;
+    line-height: /* 25px */ 1.563rem;
+    font-weight: 900;
+    @apply font-fraunces text-Alabaster;
+  }
+  /* End Button text style */
+
+  /* header styles */
+  .header-1 {
+    font-weight: 900;
+    @apply text-[2.5rem] leading-[2.5rem] md:text-[3rem] md:leading-[3rem] lg:text-[4.5rem] lg:leading-[4.5rem] font-fraunces text-Alabaster;
+
+    &.small {
+      @apply text-[1.75rem] leading-[1.75rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3rem] font-fraunces text-Alabaster;
+    }
+  }
+  /* End of header styles */
+
+  /* Descriptions styles */
+  .description-1 {
+    @apply text-[0.938rem] leading-[1.563rem] lg:text-[1rem] lg:leading-[1.625rem] font-barlow text-Translucent-Alabaster;
+  }
+  /* End of Descriptions styles */
+}

@@ -1,0 +1,31 @@
+nav {
+  background: rgb(254, 252, 247);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(254, 252, 247, 0.5) 0%,
+    rgba(254, 252, 247, 1) 70%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(254, 252, 247, 0.5) 0%,
+    rgba(254, 252, 247, 1) 70%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(254, 252, 247, 0.5) 0%,
+    rgba(254, 252, 247, 1) 70%
+  );
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fefcf7",endColorstr="#fefcf7",GradientType=1);
+
+  opacity: 100%;
+  pointer-events: all;
+
+  transition: all 0.2s linear;
+
+  &:not(.open) {
+    opacity: 0;
+    pointer-events: none;
+    transition-delay: 650ms;
+  }
+}
