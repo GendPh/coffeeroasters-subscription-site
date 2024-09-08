@@ -2,13 +2,14 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, Input } from '@angular/core';
 import { BtnComponent } from '../btn/btn.component';
 import { OpenAppService } from '../service/open-app.service';
+import { AnimatedComponent } from '../animated/animated.component';
 
 
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [CommonModule, BtnComponent],
+  imports: [CommonModule, BtnComponent, AnimatedComponent],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.css'
 })

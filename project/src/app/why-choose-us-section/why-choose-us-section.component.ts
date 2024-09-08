@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { ReasonComponent } from '../reason/reason.component';
+import { AnimatedComponent } from '../animated/animated.component';
 
 export type Reasons = {
   title: string;
@@ -11,16 +12,17 @@ export type Reasons = {
 @Component({
   selector: 'app-why-choose-us-section',
   standalone: true,
-  imports: [CommonModule, ReasonComponent],
+  imports: [CommonModule, ReasonComponent, AnimatedComponent],
   templateUrl: './why-choose-us-section.component.html',
   styleUrl: './why-choose-us-section.component.css'
 })
 export class WhyChooseUsSectionComponent {
+  // Array of reasons to choose us
   public reasons: Reasons[] = [
     {
       title: "Best quality",
       description: "Discover an endless variety of the world’s best artisan coffee from each of our roasters.",
-      icon: "coffee-bean"
+      icon: "quality"
     },
     {
       title: "Exclusive benefits",
@@ -33,9 +35,4 @@ export class WhyChooseUsSectionComponent {
       icon: "truck"
     }
   ];
-
-
-
-
-
 }

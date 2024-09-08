@@ -1,19 +1,22 @@
-<section id="why-choose-us" class="text-center">
+<section id="why-choose-us" class="text-center overflow-hidden">
+  <article class="bg-Charcoal-Blue px-6 pt-16 md:pt-14 pb-7 md:pb[70px] lg:pt-[100px] lg:pb-[86px] rounded-t-[10px]">
+    <div class="max-w-[540px] mx-auto">
+      <app-animated Animation="fadeInLeft">
+        <h2>Why choose us?</h2>
+      </app-animated>
 
-  <article class="bg-Charcoal-Blue px-6 pt-16 pb-7 rounded-t-[10px]">
-    <h2>Why choose us?</h2>
-
-    <p class="description-1 mt-6">A large part of our role is choosing which particular coffees will be featured in our
-      range. This means working closely with the best coffee growers to give you a more impactful experience on every
-      level.</p>
+      <app-animated Animation="fadeInRight">
+        <p class="description-1 mt-6 lg:mt-8 md:px-5">
+          A large part of our role is choosing which particular coffees will be featured in our range. This means
+          working closely with the best coffee growers to give you a more impactful experience on every level.
+        </p>
+      </app-animated>
+    </div>
   </article>
 
-
-  <article class="grid gap-6 pt-9 px-6" id="reasons">
-
-    <app-reason *ngFor="let reason of reasons" [Reason]="reason" />
-
-
+  <article class="grid lg:grid-cols-3 gap-6 lg:gap-[30px] pt-9 md:pt-0 px-6 xl:px-[85px]" id="reasons">
+    <app-animated *ngFor="let reason of reasons" Animation="zoomInLeft">
+      <app-reason [Reason]="reason" />
+    </app-animated>
   </article>
-
 </section>

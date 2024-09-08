@@ -1,7 +1,7 @@
 #why-choose-us {
   h2 {
     font-weight: 900;
-    @apply text-[1.75rem] leading-[1.75rem] font-fraunces text-Alabaster;
+    @apply text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] leading-[1.75rem] md:leading-[3rem] font-fraunces text-Alabaster;
   }
 
   #reasons {
@@ -17,7 +17,7 @@
       background-repeat: no-repeat;
       background-position: center;
       z-index: -1;
-      @apply h-[633px] rounded-b-[10px] bg-Charcoal-Blue;
+      @apply h-[633px] md:h-[355px] lg:h-[255px] md:bg-none rounded-b-[10px] bg-Charcoal-Blue;
     }
   }
 }

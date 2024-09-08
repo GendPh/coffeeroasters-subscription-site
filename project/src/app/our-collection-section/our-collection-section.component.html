@@ -1,16 +1,17 @@
 <section class="my-[120px] text-center">
-
   <article>
     <!-- Hold the title with a gradient above it -->
     <div class="gradient-bg-header">
-      <h2 class="animate__animated" [ngClass]="{'opacity-0': !inViewport, 'animate__zoomIn': inViewport}">our collection
-      </h2>
+      <app-animated Animation="zoomIn">
+        <h2>our collection</h2>
+      </app-animated>
     </div>
+
     <!-- Hold the collections -->
     <div class="grid gap-12 md:gap-8 lg:gap-[30px] lg:grid-cols-4 mt-[13px] lg:mt-[18px]">
-      <app-collection *ngFor="let collection of collections" [Collection]="collection" />
+      <app-animated *ngFor="let collection of collections" Animation="bounceIn">
+        <app-collection [Collection]="collection" />
+      </app-animated>
     </div>
-
   </article>
-
 </section>

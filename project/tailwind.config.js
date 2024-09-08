@@ -5,12 +5,31 @@ module.exports = {
   ],
   theme: {
     extend: {
+
+      fontSize: {
+        "24": "1.5rem",
+        "28": "1.75rem",
+        "32": "2rem",
+        "48": "3rem",
+        "72": "4.5rem",
+      },
+      lineHeight: {
+        "28": "1.75rem",
+        "32": "2rem",
+        "48": "3rem",
+        "72": "4.5rem",
+      },
+
+
+      fontWeight: {
+        black: '900',
+      },
+
       fontFamily: {
         'barlow': ['Barlow', 'sans-serif'],
         'fraunces': ['Fraunces', 'sans-serif'],
       },
       colors: {
-
         "Alabaster": '#fefcf7',
         "Translucent-Alabaster": 'rgba(254, 252, 247, 0.8)',
         "Cool-Gray": '#83888F',

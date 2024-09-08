@@ -1,0 +1,51 @@
+<!-- This section holds all the information about how works to prepare the coffee. the header and the circles with lines as an entry animation -->
+<section class="my-[120px] md:my-[144px lg:my-[200px] text-center md:text-start lg:pl-[85px] ">
+  <article>
+    <app-animated>
+      <h2 class="font-fraunces text-Cool-Gray text-24 leading-32 font-black">
+        How it works
+      </h2>
+    </app-animated>
+
+    <!-- This div only appears in table and bigger screens. the circles and lines have an entry animation with a delay of 200ms -->
+    <div class="hidden md:grid grid-cols-3 md:mt-10">
+      <!-- circle and line -->
+      <div class="flex items-center justify-start">
+        <app-animated>
+          <div class="w-[31px] h-[31px] rounded-full border-2 border-btn-bg"></div>
+        </app-animated>
+        <div class="h-[2px] bg-Apricot-Cream transition-all duration-1000"
+          [ngClass]="{'w-0':!firstLineView,'w-full':firstLineView}"></div>
+      </div>
+
+      <!-- circle and line -->
+      <div class="flex items-center justify-start">
+        <app-animated [Delay]="650">
+          <div class="w-[31px] h-[31px] rounded-full border-2 border-btn-bg"></div>
+        </app-animated>
+        <div class="h-[2px] bg-Apricot-Cream transition-all duration-1000"
+          [ngClass]="{'w-0':!SecondLineView,'w-full':SecondLineView}"></div>
+      </div>
+      <!-- circle -->
+      <div class="flex items-center justify-start">
+        <app-animated [Delay]="1300">
+          <div class="w-[31px] h-[31px] rounded-full border-2 border-btn-bg"></div>
+        </app-animated>
+      </div>
+    </div>
+
+    <!-- This div will show all the info about preparing the coffee -->
+    <div class="grid md:grid-cols-3 gap-14 md:gap-0 my-10 md:mt-12 md:mb-11 lg:mb-16 lg:mt-[67px]">
+      <app-animated *ngFor="let howWork of howWorks; let i = index" Animation="fadeInLeft"
+        [Delay]="WorkComponentDelay(i)">
+        <app-how-work [HowWork]="howWork" />
+      </app-animated>
+    </div>
+
+    <!-- Btn to redirect to "create a plan" page -->
+    <app-btn />
+
+  </article>
+
+
+</section>

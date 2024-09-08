@@ -39,6 +39,9 @@
     }
     &.footer {
       @apply hover:text-Alabaster;
+      &.current {
+        @apply text-Alabaster;
+      }
     }
   }
   /* End Link from header / mobile nav /footer */
