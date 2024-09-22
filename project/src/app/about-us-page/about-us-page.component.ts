@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HeroSectionComponent } from '../hero-section/hero-section.component';
+import { SetTopPageService } from '../service/set-top-page.service';
 
 @Component({
   selector: 'app-about-us-page',
@@ -9,5 +10,7 @@ import { HeroSectionComponent } from '../hero-section/hero-section.component';
   styleUrl: './about-us-page.component.css'
 })
 export class AboutUsPageComponent {
-
+  constructor(private setPageToTopService: SetTopPageService) {
+    setPageToTopService.SetPageToTop();
+  }
 }
